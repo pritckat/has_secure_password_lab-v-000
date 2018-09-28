@@ -1,23 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  # it 'has a password field' do
-  #   expect(User.new).to respond_to(:password)
-  # end
-  #
-  # it 'has a name field' do
-  #   expect(User.new).to respond_to(:name)
-  # end
-  #
-  # it 'has a password confirmation field' do
-  #   expect(User.new).to respond_to(:password_confirmation)
-  # end
-  #
-  # it 'is valid if password and password_confirmation match' do
-  #   user = User.new
-  #   user.password = user.password_confirmation = 'foo'
-  #   expect(user.valid?).to be true
-  # end
+  it 'has a password field' do
+    expect(User.new).to respond_to(:password)
+  end
+
+  it 'has a name field' do
+    expect(User.new).to respond_to(:name)
+  end
+
+  it 'has a password confirmation field' do
+    expect(User.new).to respond_to(:password_confirmation)
+  end
+
+  it 'is valid if password and password_confirmation match' do
+    user = User.new
+    user.password = user.password_confirmation = 'foo'
+    expect(user.valid?).to be true
+  end
 
   it 'is valid if password is set and password_confirmation is nil' do
      user = User.new
